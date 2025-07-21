@@ -9,7 +9,8 @@ html, body, #root {
   padding: 0;
   overflow: hidden;
   box-sizing: border-box;
-/* End of .vertical-navbar a.selected::after */
+}
+
 @font-face {
   font-family: 'BMSPA';
   src: url('src/assets/BMSPA___.TTF') format('truetype');
@@ -20,159 +21,111 @@ html, body, #root {
 body, #root, .vertical-navbar, h1, h2, h3, h4, h5, h6 {
   font-family: 'BMSPA';
 }
-/* Vertical Navbar Styles */
+/* Persona 3 Reload Inspired Navbar */
 .vertical-navbar {
   position: absolute;
-  top: 40px;
-  left: 40px;
-  width: 160px;
-  min-height: 220px;
-  background: transparent;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-  border-radius: 18px;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  padding: 24px 0;
+  gap: 0;
   z-index: 10;
-  align-items: stretch;
-  font-family: 'BMSPA';
-}
-
-.vertical-navbar, .vertical-navbar * {
-  font-family: 'BMSPA';
-  font-weight: 700;
-  letter-spacing: 1px;
-  overflow: visible;
-}
-
-.navbar-bg-shapes {
-  position: absolute;
-  top: -60px;
-  left: -80px;
-  width: 320px;
-  height: 500px;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.triangle {
-  position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0.18;
-  filter: blur(0.5px);
-  animation: float-triangle 6s ease-in-out infinite alternate;
-}
-.triangle.blue {
-  border-left: 120px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 180px solid #00bfff;
-  left: 40px;
-  top: 30px;
-  animation-delay: 0s;
-}
-.triangle.cyan {
-  border-left: 60px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 120px solid #00fff7;
-  left: 100px;
-  top: 180px;
-  animation-delay: 1.5s;
-}
-.triangle.white {
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-bottom: 80px solid #fff;
-  left: 120px;
-  top: 80px;
-  opacity: 0.09;
-  animation-delay: 2.5s;
-}
-.triangle.darkblue {
-  border-left: 80px solid transparent;
-  border-right: 40px solid transparent;
-  border-bottom: 100px solid #0050a0;
-  left: 10px;
-  top: 260px;
-  opacity: 0.13;
-  animation-delay: 3.5s;
-}
-
-@keyframes float-triangle {
-  0% { transform: translateY(0) scale(1) rotate(-8deg); }
-  100% { transform: translateY(-30px) scale(1.08) rotate(8deg); }
+  background: none;
+  padding: 0;
+  min-width: 340px;
+  pointer-events: auto;
 }
 
 .vertical-navbar a {
-  color: #007bff;
-  padding: 16px 24px;
-  text-decoration: none;
-  font-size: 18px;
-  border-radius: 8px;
-  transition: color 0.2s;
+  display: block;
   position: relative;
-  z-index: 2;
-  background: transparent !important;
-  font-family: 'BMSPA' !important;
+  color: #38d6ff;
+  font-family: 'Montserrat', 'BMSPA', Arial, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  padding: 0.1em 0.5em 0.1em 0.7em;
+  margin: -0.3em 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  transform: skew(-22deg) scaleX(1.08);
+  transition: color 0.18s, text-shadow 0.18s, transform 0.18s, font-size 0.18s, margin 0.25s cubic-bezier(.68,-0.55,.27,1.55);
+  text-shadow: 2px 2px 0 #000, 0 0 10px #0ff8;
+  outline: none;
+  opacity: 0.85;
+  z-index: 1;
+  line-height: 1.1;
 }
 
 .vertical-navbar a.selected {
-  color: #fff;
-  background: transparent !important;
-  font-family: 'BMSPA' !important;
-  font-size: 20px;
+  color: #111;
+  z-index: 3;
+  font-size: 3.6rem;
   font-weight: 900;
-  text-shadow: 2px 2px 0 #00bfff, 0 0 8px #00bfff99;
-  transform: rotate(-4deg) scale(1.1);
-  transform-origin: left center;
-  letter-spacing: 2px;
-  transition: transform 0.3s cubic-bezier(.68,-0.55,.27,1.55), color 0.2s, text-shadow 0.2s;
+  opacity: 1;
+  text-shadow: 4px 4px 0 #fff, 0 0 18px #fff8;
+  transform: skew(-22deg) scale(1.18);
+  margin: 0.7em 0;
 }
 
-  /* Main blue triangle */
 .vertical-navbar a.selected::before {
   content: '';
   position: absolute;
-  left: -100px;
+  left: 60px;
   top: 50%;
-  transform: translateY(-50%) skew(-16deg, 0deg) rotate(-10deg) scaleX(1.3);
-  width: 0;
-  height: 0;
-  border-left: 24px solid transparent;
-  border-right: 90px solid transparent;
-  border-bottom: 70px solid #00bfff;
-  opacity: 0.45;
-  filter: blur(1px);
-  z-index: 1;
-  animation: float-triangle 2.5s ease-in-out infinite alternate;
-  box-shadow: 0 8px 32px 0 #00bfff44;
-  pointer-events: none;
+  transform: translateY(-50%) rotateZ(-16deg) skew(-12deg, -8deg) scaleX(1.1);
+  width: 220px;
+  height: 2.1em;
+  background: linear-gradient(90deg, #fff 80%, #ff4fa3 100%);
+  border-radius: 12px 40px 40px 12px;
+  z-index: -2;
+  box-shadow: 0 6px 32px 0 #fff8, 0 0 0 6px #ff4fa3;
+  opacity: 1;
+  transition: width 0.18s, height 0.18s, box-shadow 0.18s, left 0.18s, top 0.18s, transform 0.18s;
+  animation: p3r-highlight 1.2s cubic-bezier(.68,-0.55,.27,1.55) infinite alternate;
 }
-/* Cyan triangle accent */
+
 .vertical-navbar a.selected::after {
   content: '';
   position: absolute;
-  left: -80px;
-  top: 60%;
-  transform: translateY(-50%) skew(-10deg, 0deg) rotate(-4deg) scaleX(1.1);
-  width: 0;
-  height: 0;
-  border-left: 12px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 40px solid #00fff7;
-  opacity: 0.22;
+  left: 210px;
+  top: 50%;
+  transform: translateY(-50%) rotateZ(-16deg) skew(-12deg, -8deg) scaleX(1.1);
+  width: 40px;
+  height: 1.7em;
+  background: linear-gradient(90deg, #ff4fa3 60%, #fff0 100%);
+  border-radius: 0 32px 32px 0;
+  z-index: -1;
+  opacity: 0.85;
   filter: blur(0.5px);
-  z-index: 0;
-  animation: float-triangle 3.2s ease-in-out infinite alternate;
-  pointer-events: none;
-}
 }
 
-.vertical-navbar a:hover,
-.vertical-navbar a:focus,
+@keyframes p3r-highlight {
+  0% { filter: brightness(1) blur(0.5px); }
+  100% { filter: brightness(1.12) blur(2px); }
+}
+
+.vertical-navbar a:hover:not(.selected),
+.vertical-navbar a:focus:not(.selected) {
+  color: #fff;
+  text-shadow: 2px 2px 0 #00bfff, 0 0 8px #00bfff99;
+  transform: skew(-22deg) scale(1.08);
+  opacity: 1;
+}
+
 .vertical-navbar a:active {
-  background: transparent !important;
-  color: #007bff;
+  color: #ff0055;
+}
+
+/* Remove old triangle shapes and background for clarity */
+.navbar-bg-shapes, .triangle { display: none !important; }
+
+.vertical-navbar, .vertical-navbar * {
+  font-family: 'Montserrat', 'BMSPA', Arial, sans-serif !important;
+  text-transform: uppercase;
 }
 
 h1, h2, h3, h4, h5, h6 {
