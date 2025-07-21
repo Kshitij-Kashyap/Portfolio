@@ -1,5 +1,8 @@
 # React + TypeScript + Vite
+My Portfolio
+============
 
+This is my interactive portfolio built using React and Three.js. It features a dynamic 3D scene, a Persona 3 Reload-inspired UI, and smooth camera transitions between sections.
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
